@@ -4,17 +4,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './home.css';
 
-import slide1 from './slide1.png';
-import slide2 from './slide2.png';
-import slide3 from './slide3.png';
-import slide4 from './slide4.png';
-import slide5 from './slide5.jpg';
-import slide6 from './slide6.jpg';
-import slide7 from './slide7.jpg';
-
+import slide1 from './images/slide1.png';
+import slide2 from './images/slide2.png';
+import slide3 from './images/slide3.png';
+import slide4 from './images/slide4.png';
+import slide5 from './images/slide5.jpg';
+import slide6 from './images/slide6.jpg';
+import slide7 from './images/slide7.jpg';
 
 const createHome = () => {
   const homeTab = document.querySelector('.con');
+  
 
   // Create the HTML structure for the Swiper slider
   const swiperContainer = document.createElement('div');
@@ -53,14 +53,13 @@ const createHome = () => {
   const swiperButtonNext = document.createElement('div');
   swiperButtonNext.classList.add('swiper-button-next');
 
-  const swiperScrollbar = document.createElement('div');
-  swiperScrollbar.classList.add('swiper-scrollbar');
+ 
 
   swiperContainer.appendChild(swiperWrapper);
   swiperContainer.appendChild(swiperPagination);
   swiperContainer.appendChild(swiperButtonPrev);
   swiperContainer.appendChild(swiperButtonNext);
-  swiperContainer.appendChild(swiperScrollbar);
+ 
 
   homeTab.appendChild(swiperContainer);
 
@@ -74,9 +73,7 @@ const createHome = () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
+
     modules: [Navigation, Pagination],
   });
 

@@ -6,5 +6,5 @@
 // import { createAbout } from "./about";
 // createAbout();
 
-// import { createHome } from "./home";
-// createHome();
+import { createHome } from "./home";
+createHome();
