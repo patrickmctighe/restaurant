@@ -54,6 +54,7 @@ const createHome = () => {
     slide.classList.add("swiper-slide");
 
     const slideImg = document.createElement("img");
+    slideImg.setAttribute("class","imgs")
     slideImg.src = slideContent;
 
     slide.appendChild(slideImg);
