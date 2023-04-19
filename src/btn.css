@@ -1,0 +1,31 @@
+.btn{
+    color:black;
+    border: none;
+    background-color: transparent;
+    font-weight: 100;
+    font-size: 3.5vh;
+}
+.btn:hover{
+    color:white;
+    background-color:pink;
+    border-radius: 10%;
+}
+.tabs{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:10%;
+    
+    
+}
+
+a{
+    color: rgb(216, 112, 129);
+    
+}
+
+.title{
+    color: pink;
+    position: relative;
+    left:7%;
+}

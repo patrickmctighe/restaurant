@@ -1,83 +1,94 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import './home.css';
+import Swiper, { Navigation, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./home.css";
+import "./btn.css"
+import { createWork } from "./work";
+import { createAbout } from "./about";
 
-import slide1 from './images/slide1.png';
-import slide2 from './images/slide2.png';
-import slide3 from './images/slide3.png';
-import slide4 from './images/slide4.png';
-import slide5 from './images/slide5.jpg';
-import slide6 from './images/slide6.jpg';
-import slide7 from './images/slide7.jpg';
+import slide1 from "./images/slide1.png";
+import slide2 from "./images/slide2.png";
+import slide3 from "./images/slide3.png";
+import slide4 from "./images/slide4.png";
+import slide5 from "./images/slide5.jpg";
+import slide6 from "./images/slide6.jpg";
+import slide7 from "./images/slide7.png";
 
 const createHome = () => {
-  const homeTab = document.querySelector('.con');
-  
+  const tabs = document.createElement("div");
+  tabs.setAttribute("class","tabs")
+  const page = document.querySelector(".con");
+  const homeBtn = document.createElement("button");
+  homeBtn.setAttribute("class", "btn");
+  homeBtn.innerHTML = "HOME";
+  const workBtn = document.createElement("button");
+  workBtn.setAttribute("class", "btn");
+  workBtn.innerHTML = "WORK";
+  const aboutBtn = document.createElement("button");
+  aboutBtn.setAttribute("class", "btn");
+  aboutBtn.innerHTML = "ABOUT";
+  page.append(tabs);
+  tabs.append(homeBtn, workBtn, aboutBtn);
 
-  // Create the HTML structure for the Swiper slider
-  const swiperContainer = document.createElement('div');
-  swiperContainer.classList.add('swiper');
+  workBtn.addEventListener("click", () => {
+    page.innerHTML = "";
+    createWork();
+  });
 
-  const swiperWrapper = document.createElement('div');
-  swiperWrapper.classList.add('swiper-wrapper');
+  aboutBtn.addEventListener("click", () => {
+    page.innerHTML = "";
+    createAbout();
+  });
 
-  const swiperSlides = [
-    slide1,
-    slide2,
-    slide3,
-    slide4,
-    slide5,
-    slide6,
-    slide7,
-  ];
+  const swiperContainer = document.createElement("div");
+  swiperContainer.classList.add("swiper");
+
+  const swiperWrapper = document.createElement("div");
+  swiperWrapper.classList.add("swiper-wrapper");
+
+  const swiperSlides = [slide1, slide2, slide3, slide4, slide5, slide6, slide7];
 
   swiperSlides.forEach((slideContent) => {
-    const slide = document.createElement('div');
-    slide.classList.add('swiper-slide');
+    const slide = document.createElement("div");
+    slide.classList.add("swiper-slide");
 
-    const slideImg = document.createElement('img');
+    const slideImg = document.createElement("img");
     slideImg.src = slideContent;
 
     slide.appendChild(slideImg);
     swiperWrapper.appendChild(slide);
   });
 
-  const swiperPagination = document.createElement('div');
-  swiperPagination.classList.add('swiper-pagination');
+  const swiperPagination = document.createElement("div");
+  swiperPagination.classList.add("swiper-pagination");
 
-  const swiperButtonPrev = document.createElement('div');
-  swiperButtonPrev.classList.add('swiper-button-prev');
+  const swiperButtonPrev = document.createElement("div");
+  swiperButtonPrev.classList.add("swiper-button-prev");
 
-  const swiperButtonNext = document.createElement('div');
-  swiperButtonNext.classList.add('swiper-button-next');
-
- 
+  const swiperButtonNext = document.createElement("div");
+  swiperButtonNext.classList.add("swiper-button-next");
 
   swiperContainer.appendChild(swiperWrapper);
   swiperContainer.appendChild(swiperPagination);
   swiperContainer.appendChild(swiperButtonPrev);
   swiperContainer.appendChild(swiperButtonNext);
- 
 
-  homeTab.appendChild(swiperContainer);
+  page.appendChild(swiperContainer);
 
-  // Instantiate a new Swiper object
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper(".swiper", {
     loop: true,
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
     },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
 
     modules: [Navigation, Pagination],
   });
 
-  // Initialize the Swiper object
   swiper.init();
 };
 

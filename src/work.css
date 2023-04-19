@@ -1,10 +1,16 @@
-.list{
-    font-size: 20px;
-    font-weight: 100;
-    text-decoration:none;
-    color: black;
+.list {
+  font-size: 20px;
+  font-weight: 100;
+  text-decoration: none;
+  color: black;
 }
-.aList{
-    color:black;
-    font-size: 15px;
+.aList {
+  color: black;
+  font-size: .9em;
+}
+.list:hover{
+    background-color: pink;
+}
+.print{
+    padding-top: 1em;
 }

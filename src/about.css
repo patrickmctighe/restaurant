@@ -1,3 +1,23 @@
+.text #text a{
+    color:black;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
 .text{
-    color:red;
+    width: 30%;
+    line-height: 2;
+   font-weight: 100;
+}
+#text1{
+    padding-top: 2.5%;
+}
+.con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

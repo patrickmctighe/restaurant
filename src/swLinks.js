@@ -181,4 +181,4 @@ const swLinks = [
   },
 ];
 
-export {swLinks}
+export { swLinks };

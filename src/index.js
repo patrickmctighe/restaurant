@@ -1,10 +1,12 @@
-
-// console.log("hello");
-// import { createWork } from "./work";
-// createWork();
-
-// import { createAbout } from "./about";
-// createAbout();
-
 import { createHome } from "./home";
-createHome();
+import { createWork } from "./work";
+import { createAbout } from "./about";
+
+function setupTabs() {
+  // Show home content by default
+  createHome();
+}
+
+setupTabs();
+
+export { setupTabs };

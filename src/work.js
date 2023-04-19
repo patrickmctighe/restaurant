@@ -1,19 +1,46 @@
 import { printLinks } from "./printLinks";
 import { swLinks } from "./swLinks.js";
-import './work.css'
-const createWork = () => {
-    // content area
-  const workTab = document.querySelector(".con");
+import "./work.css";
+import "./btn.css"
+import { createHome } from "./home";
+import { createAbout } from "./about";
 
-//print title and links
+const createWork = () => {
+  const tabs = document.createElement("div");
+  tabs.setAttribute("class","tabs")
+  const page = document.querySelector(".con");
+  const homeBtn = document.createElement("button");
+  homeBtn.setAttribute("class", "btn");
+  homeBtn.innerHTML = "HOME";
+  const workBtn = document.createElement("button");
+  workBtn.setAttribute("class", "btn");
+  workBtn.innerHTML = "WORK";
+  const aboutBtn = document.createElement("button");
+  aboutBtn.setAttribute("class", "btn");
+  aboutBtn.innerHTML = "ABOUT";
+  page.append(tabs);
+  tabs.append(homeBtn, workBtn, aboutBtn);
+
+  homeBtn.addEventListener("click", () => {
+    page.innerHTML = "";
+    createHome();
+  });
+
+  aboutBtn.addEventListener("click", () => {
+    page.innerHTML = "";
+    createAbout();
+  });
+
+  //print title and links
   const printHead = document.createElement("h1");
+  printHead.setAttribute("class","print")
   printHead.innerHTML = "PRINT";
   const printList = document.createElement("ul");
   for (let i = 0; i < printLinks.length; i++) {
     const li = document.createElement("li");
-    li.setAttribute("class","list")
+    li.setAttribute("class", "list");
     const a = document.createElement("a");
-    a.setAttribute('class',"aList")
+    a.setAttribute("class", "aList");
     a.textContent = printLinks[i].text;
     a.setAttribute("href", printLinks[i].url);
     li.appendChild(a);
@@ -21,15 +48,15 @@ const createWork = () => {
   }
   printHead.appendChild(printList);
 
-// selected writing and links
+  // selected writing and links
   const swHead = document.createElement("h1");
   swHead.innerHTML = "SELECTED WRITING";
   const swList = document.createElement("ul");
-  for(let i = 0; i < swLinks.length; i++){
+  for (let i = 0; i < swLinks.length; i++) {
     const li = document.createElement("li");
-    li.setAttribute("class","list")
+    li.setAttribute("class", "list");
     const a = document.createElement("a");
-    a.setAttribute('class',"aList")
+    a.setAttribute("class", "aList");
     a.textContent = swLinks[i].text;
     a.setAttribute("href", swLinks[i].url);
     li.appendChild(a);
@@ -37,9 +64,9 @@ const createWork = () => {
   }
   swHead.appendChild(swList);
 
-  workTab.append(printHead, swHead);
+  page.append(printHead, swHead);
 
-  return workTab;
+  return page;
 };
 
 export { createWork };

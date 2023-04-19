@@ -1,4 +1,13 @@
 .swiper {
-    width: 900px;
-    height: 900px;
+    width: 65%;
+    height: 85vh;
   }
+
+  .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  :root {
+    --swiper-theme-color: pink;
+}
