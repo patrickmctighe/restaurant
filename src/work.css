@@ -14,3 +14,17 @@
 .print{
     padding-top: 1em;
 }
+
+@media (max-width: 768px) {
+    .list {
+        font-size: 16px;
+    }
+    
+    .aList {
+        font-size: 0.8em;
+    }
+    
+    .print {
+        padding-top: 0.5em;
+    }
+}

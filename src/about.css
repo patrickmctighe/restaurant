@@ -21,3 +21,13 @@
     align-items: center;
     flex-direction: column;
 }
+
+@media (max-width: 768px) {
+    .text {
+        width: 90%;
+    }
+    
+    #text1 {
+        padding-top: 5%;
+    }
+}
