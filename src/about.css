@@ -22,12 +22,13 @@
     flex-direction: column;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .text {
         width: 100%;
     }
     
     #text1 {
         padding-top: 5%;
+        color:red;
     }
 }
