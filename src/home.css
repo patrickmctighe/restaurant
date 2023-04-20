@@ -15,17 +15,19 @@
 .imgs{
     width: auto ;
     max-width: 100% ;
-    height: 80% ;
+    height:auto ;
 }
 @media (max-width: 600px) {
     .swiper {
         width: 100%;
         height: 50vh;
+        padding-top: 20%;
+        padding-bottom: 20%;
     }
 
     .imgs {
-        width: 85%;
+        width:auto;
         max-width: 400px;
-        height: 85%;
+        height: auto;
     }
 }

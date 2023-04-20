@@ -24,11 +24,11 @@
 
 @media (max-width: 600px) {
     .text {
-        width: 100%;
+        width: 90%;
     }
     
     #text1 {
         padding-top: 5%;
-        color:red;
+        
     }
 }
