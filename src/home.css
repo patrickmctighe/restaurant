@@ -15,7 +15,7 @@
 .imgs{
     width: auto ;
     max-width: 100% ;
-    height: auto ;
+    height: 80% ;
 }
 @media (max-width: 600px) {
     .swiper {
@@ -24,8 +24,8 @@
     }
 
     .imgs {
-        width: 100%;
+        width: 85%;
         max-width: 400px;
-        height: auto;
+        height: 85%;
     }
 }
