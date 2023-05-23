@@ -1,6 +1,6 @@
 const swLinks = [
   {
-    text: "The Sky is Vampiric",
+    text: "The Sky is Vampiric[HOBART]",
     url: "https://www.hobartpulp.com/web_features/the-sky-is-vampiric",
   },
   {
