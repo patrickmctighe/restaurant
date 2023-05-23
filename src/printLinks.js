@@ -1,7 +1,7 @@
 const printLinks = [
   {
-    text: "Forthcoming: Olney Magazine Dissents Issue, Honorarium Winner, I am No Mare ",
-    url: "",
+    text:"Olney Magazine Dissents Issue, Honorarium Winner, I am No Mare",
+    url: "https://www.olneymagazine.com/store/p/issue-5-pre-order",
   },
   {
     text: "Letter to a Stranger ",

@@ -1,5 +1,9 @@
 const swLinks = [
   {
+    text: "The Sky is Vampiric",
+    url: "https://www.hobartpulp.com/web_features/the-sky-is-vampiric",
+  },
+  {
     text: " after life [Luna Luna]",
     url: "http://www.lunalunamagazine.com/blog/aimee-keeble",
   },
