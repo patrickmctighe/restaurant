@@ -1,5 +1,9 @@
 const swLinks = [
   {
+    text: "Rabbit Heart [Split Lip Magazine]",
+    url: " https://splitlipthemag.com/flash/0623/aime-keeble",
+  },
+  {
     text: "The Sky is Vampiric [HOBART]",
     url: "https://www.hobartpulp.com/web_features/the-sky-is-vampiric",
   },
